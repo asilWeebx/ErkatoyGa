@@ -1,0 +1,437 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Grandstander&display=swap');
+
+
+a{
+text-decoration: none;
+}
+.soz{
+    text-decoration: none;
+    font-size: 35px;
+}
+.qizyoz{
+    color: #fec6e8;
+}
+
+*{
+    color: white;
+    font-family: "Grandstander" ;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #aaaae2;
+}
+
+.asosiy {
+    width: 100%;
+    background-color: #e2f7ff;
+}
+
+.header2 {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.li2 p {
+    margin-top: -8px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.li2 {
+    width: 60px;
+    margin-top: 82px;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+.li2 p {
+    margin-left: 15px;
+    margin-top: -3px;
+    font-size: 35px;
+    font-weight: bold;
+}
+.li2 img {
+    height: 100%;
+    margin-top: 2px;
+}
+.Logo {
+    width: 200px;
+    object-fit: cover;
+}
+
+.img-box {
+    background-image: url(../images/site-main\ page-logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    margin: 40px auto;
+}
+
+.animated-text {
+    color: #fff;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 40px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.line {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Grandstander";
+    line-height: 60px;
+    overflow: hidden;
+}
+.line:first-child {
+    animation: anim 12s infinite;
+}
+@keyframes anim {
+    0% {
+        margin-top: 0;
+    }
+    20% {
+        margin-top: -60px;
+    }
+    40% {
+        margin-top: -120px;
+    }
+    55% {
+        margin-top: -180px;
+    }
+    79% {
+        margin-top: -60px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+.card {
+    
+    -webkit-box-shadow: 3px 3px 40px 19px rgba(29, 92, 145, 0.54);
+-moz-box-shadow: 3px 3px 40px 19px rgba(29, 92, 145, 0.54);
+box-shadow: 3px 3px 40px 19px rgba(29, 92, 145, 0.54);
+    width: 180px !important;
+    border: none !important;
+    border-radius: 25px !important;
+    padding: 10px !important;
+}
+.qiz{
+    -webkit-box-shadow: 3px 3px 40px 19px rgba(119, 45, 123, 0.54);
+-moz-box-shadow: 3px 3px 40px 19px rgba(119, 45, 123, 0.54);
+box-shadow: 3px 3px 40px 19px rgba(119, 45, 123, 0.54);
+}
+
+.ortaga {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.magazin {
+    width: 80%;
+}
+
+.col {
+    display: flex !important;
+    justify-content: center !important;
+}
+.coll {
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+.OgilBola {
+    font-size: 22px;
+    -webkit-box-shadow: 2px 5px 45px 26px rgba(0, 125, 221, 0.46);
+    -moz-box-shadow: 2px 5px 45px 26px rgba(0, 125, 221, 0.46);
+    box-shadow: 2px 5px 45px 11px rgba(0, 125, 221, 0.46);
+    background-color: #649eb6;
+    border: none;
+    border-radius: 13px;
+    text-align: center;
+    height: 80px;
+    width: 120px;
+}
+.QizBola {
+    
+    font-size: 22px;
+    -webkit-box-shadow: 2px 5px 45px 26px rgba(221, 74, 230, 0.46);
+    -moz-box-shadow: 2px 5px 45px 26px rgba(221, 74, 230, 0.46);
+    box-shadow: 2px 5px 45px 11px rgba(221, 74, 230, 0.46);
+    background-color: #fec6e8;
+    border: none;
+    border-radius: 13px;
+    margin: 0px 22px;
+    text-align: center;
+    width: 120px;
+    height: 80px;
+}
+
+.Umumiy {
+    font-size: 22px;
+    
+    -webkit-box-shadow: 2px 5px 45px 26px rgba(113, 66, 116, 0.46);
+    -moz-box-shadow: 2px 5px 45px 26px rgba(113, 66, 116, 0.46);
+    box-shadow: 2px 5px 45px 11px rgba(113, 66, 116, 0.46);
+    background-color: #8b86ae;
+    border: none;
+    border-radius: 13px;
+    text-align: center;
+    width: 120px;
+    height: 80px;
+
+    position: relative;
+    top: 11px;
+}
+
+
+.card-title p{
+    color: #649eb6;
+    font-size: 15px;
+}
+
+
+.qiz p{
+    color: #fec6e8;
+    
+}
+
+.foto{
+    margin-left: 250px;
+    
+}
+.foto img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin: 20px;
+}
+
+.tuga{
+    padding: 30px;
+    margin-top: 170px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.erkatoy3{
+   
+
+}
+.erkatoy3 img{
+ width: 100%;
+}
+
+.ortaga2{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.magazin2{
+    width: 70%;
+    display: flex ;
+    justify-content: center ;
+}
+
+
+.erkatoy4 img{
+    margin-bottom: 30px;
+    width: 80%;
+    height: 144px;
+}
+
+.inputg{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* this is a recreation of twitter search in css */
+.form {
+    --input-text-color: #fff;
+    --input-bg-color: #4689cdc7;
+    --focus-input-bg-color: transparent;
+    --text-color: #ffffff;
+    --active-color: #1b9bee;
+    --width-of-input: 200px;
+    --inline-padding-of-input: 1.2em;
+    --gap: 0.9rem;
+  }
+  /* form style */
+  .form {
+    
+    font-size: 0.9rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: var(--width-of-input);
+    position: relative;
+    isolation: isolate;
+  }
+  /* a fancy bg for showing background and border when focus. */
+  .fancy-bg {
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    background: var(--input-bg-color);
+    border-radius: 30px;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  /* label styling */
+  label {
+    width: 100%;
+    padding: 0.8em;
+    height: 40px;
+    padding-inline: var(--inline-padding-of-input);
+    display: flex;
+    align-items: center;
+  }
+
+  
+  .search,.close-btn {
+    position: absolute;
+  }
+  /* styling search-icon */
+  .search {
+    fill: var(--text-color);
+    left: var(--inline-padding-of-input);
+  }
+  /* svg -- size */
+  svg {
+    width: 17px;
+    display: block;
+  }
+  /* styling of close button */
+  .close-btn {
+    border: none;
+    right: var(--inline-padding-of-input);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0.1em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--active-color);
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* styling of input */
+  .input {
+    color: var(--input-text-color);
+    width: 100%;
+    margin-inline: min(2em,calc(var(--inline-padding-of-input) + var(--gap)));
+    background: none;
+    border: none;
+  }
+  
+  .input:focus {
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: var(--text-color)
+  }
+  /* input background change in focus */
+  .input:focus ~ .fancy-bg {
+    border: 1px solid var(--active-color);
+    background: var(--focus-input-bg-color);
+  }
+  /* search icon color change in focus */
+  .input:focus ~ .search {
+    fill: var(--active-color);
+  }
+  /* showing close button when typing */
+  .input:valid ~ .close-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+  }
+
+@media screen and (max-width: 500px) {
+    .niamdir55{
+        margin-left: 50px;
+        margin-bottom: 50px;
+        padding-top: 50px;
+    }
+    .nimadir2{
+        display: none !important;
+    }
+    .asosiy{
+        margin-top: -60px;
+        height: 100%;
+    }
+    .header {
+        justify-content: none;
+        display: block;
+        position: fixed;
+        margin-top: -10px;
+        border-radius: 0px 0px 19px 19px ;
+        z-index: 100;
+        
+    }
+    .li2 p{
+        margin-left: 9px;
+        font-size: 30px;
+        margin-top: 0.5px;
+        
+    }
+    .header2 {
+        position: relative;
+        top: -40px;
+        margin-left: -30px
+    }
+    .animated-text {
+        margin-top: -370px;
+    }
+    .line {
+        font-size: 17px;
+    }
+    .foto{
+        margin-left: 10px;
+        margin-top: -40px;
+    }
+    .foto img {
+        width: 40px;
+        height: 40px;
+    }
+    .soz{
+        font-size: 30px;
+        margin-bottom: 50px;
+        
+    }
+   
+}
+

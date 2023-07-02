@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@700&display=swap");
+/* body {
+    height: 900px;
+    width: 100%;
+    font-family: "Grandstander";
+} */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #aaaae2;
+}
+
+*{
+    color: white;
+    font-family: "Grandstander" ;
+}
+
+
+
+.header2 {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.li2 p {
+    margin-top: -8px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.inputg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.row{
+    display: flex !important;
+}
+
+.li2 {
+    width: 60px;
+    margin-top: 82px;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.li2 p {
+    margin-left: 15px;
+    margin-top: -3px;
+    font-size: 35px;
+    font-weight: bold;
+}
+.song{
+    display: flex;
+}
+.tuga{
+    padding: 30px;
+    margin-top: 170px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.li2 p {
+    margin-left: 15px;
+    margin-top: -3px;
+    font-size: 35px;
+    font-weight: bold;
+}
+.li2 img {
+    height: 100%;
+    margin-top: 2px;
+}
+.Logo {
+    width: 200px;
+    object-fit: cover;
+}
+
+
+.navigation {
+    background-color: #a1b7ed;
+    position: fixed;
+    margin-top: -50px;
+    z-index: 100;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.navigation > li {
+    margin: 0 50px;
+}
+.nav-item {
+    margin: 0 30px;
+}
+.page {
+    color: #fff;
+    font-family: "Grandstander";
+    font-weight: bold;
+    font-size: 27px;
+}
+.img {
+    content: "  ";
+    max-width: 850px;
+}
+.container {
+    max-width: 800px;
+}
+.page1 {
+    font-family: "Grandstander";
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 28px;
+}
+.img-box {
+    background-image: url(site-main\ page-logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 500px;
+    margin: 40px auto;
+}
+.title {
+    font-family: "Grandstander";
+    font-weight: bold;
+    font-size: 36px;
+    color: #7fa4c4;
+}
+.text {
+    font-family: "Grandstander";
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 130px;
+    width: 75%;
+    color: #7fa4c4;
+}
+.foot {
+    margin-left: 220px;
+}
+.foter {
+    margin-left: 60px;
+}
+.navi {
+    color: #7fa4c4;
+    font-size: 30px;
+    font-family: "Grandstander";
+}
+
+.animated-text {
+    color: #fff;
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 40px;
+    height: 60px;
+    overflow: hidden;
+}
+.line {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Grandstander";
+    line-height: 60px;
+    overflow: hidden;
+}
+.line:first-child {
+    animation: anim 12s infinite;
+}
+.a_sevimli {
+    margin-top: 20px;
+}
+.nav_item2 {
+    margin-top: 18px;
+}
+@keyframes anim {
+    0% {
+        margin-top: 0;
+    }
+    20% {
+        margin-top: -60px;
+    }
+    40% {
+        margin-top: -120px;
+    }
+    55% {
+        margin-top: -180px;
+    }
+    79% {
+        margin-top: -60px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 412px) {
+    .navigation {
+        width: 420px;
+        padding-top: 20px;
+    }
+    .nav-item {
+        position: relative;
+        right: 90px;
+    }
+    .nav_item2 {
+        margin: 0;
+        position: relative;
+        right: 70px;
+    }
+    .a_sevimli {
+        font-size: 20px;
+    }
+    .foot {
+        margin: 0;
+        display: none;
+        
+    }
+    .text {
+        font-size: 15px;
+        margin: 0;
+        margin-left: 60px;
+    }
+    .img-box{
+        margin-left: 25px;
+    }
+    .animated-text {
+       top: 40%;
+       left: 50%;
+    }
+    .navi{
+        font-size: 18px;
+    }
+
+    .header {
+        justify-content: none;
+        display: block;
+        position: fixed;
+        margin-top: -40px;
+        border-radius: 0px 0px 19px 19px ;
+        z-index: 100;
+        
+    }
+    .li2 p{
+        margin-left: 9px;
+        font-size: 30px;
+        margin-top: 0.5px;
+        
+    }
+    .header2 {
+        position: relative;
+        top: -50px;
+        margin-left: -30px
+    }
+    .soz{
+        font-size: 30px;
+        margin-bottom: 50px;
+        
+    }
+    .foto img {
+        width: 40px;
+        height: 40px;
+    }
+}

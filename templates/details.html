@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'fontawesome-free-6.1.1-web/css/all.css' %}">
+  <title>Document</title>
+</head>
+<body>
+<div class="asosiy">
+
+  <div class="header">
+    <div class="header2">
+      <ul>
+       <a href="{% url 'index' %}"><li> <a href="{% url 'index' %}"><img class="Logo" src="{% static 'images/logo.png' %}" alt=""></a></li></a>
+      </ul>
+      <ul>
+          {% if user.is_authenticated %}
+            <a href="{% url 'sevimli' %}">
+          {% else %}
+            <a href="{% url 'login' %}">
+          {% endif %}
+            <li class="li2"><img src="{% static 'images/heart.png' %}" alt="">
+              <p>Sevimli</p>
+            </li>
+          </a>
+        </ul>
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <div class="ortaga2">
+        <div class="magazin2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 niamdir55">
+                        <div class="erkatoy3">
+                            <img src="{{ product.image1.url }}" alt="">
+                        </div>
+                        {% if user.is_authenticated %}
+                            {% if fav %}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="{% url 'favourites' product.pk %}" class="btn btn-outline-danger">❤️ o'chirish</a>
+                                {% else %}
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="{% url 'favourites' product.pk %}" class="btn btn-outline-danger">🤍 saqlash</a>
+                                {% endif %}
+                        {% else %}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="{% url 'login' %}" class="btn btn-outline-danger">🤍 saqlash</a>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-3 nimadir2">
+                        <div class="row">
+                         <div class="col-12">
+                             <div>
+                                 <div class="erkatoy4">
+                                     <img src="{{ product.image2.url }}" alt="">
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-12">
+                             <div>
+                                 <div class="erkatoy4">
+                                     <img src="{{ product.image3.url }}" alt="">
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-12">
+                             <div>
+                                 <div class="erkatoy4">
+                                     <img src="{{ product.image4.url }}" alt="">
+                                 </div>
+                             </div>
+                         </div>
+                         
+                        </div>
+                     </div>
+                {% if product.category_id == 1 %}
+                    <h4 class="oglyoz">{{ product.title }}, soni {{ product.count }} ta</h4>
+                    <h4 class="oglyoz">{{ product.description }}</h4>
+                    <h4 class="oglyoz">{{ product.price }}</h4>
+                    <h4 class="oglyoz">{{ product.category }}</h4>
+                {% elif product.category_id == 2 %}
+                    <h4 class="qizyoz" style="color: hotpink">{{ product.title }}, soni {{ product.count }} ta</h4>
+                    <h4 class="qizyoz" style="color: hotpink">{{ product.description }}</h4>
+                    <h4 class="qizyoz" style="color: hotpink">{{ product.price }}</h4>
+                    <h4 class="qizyoz" style="color: hotpink">{{ product.category }}</h4>
+                {% elif product.category_id == 3 %}
+                    <h4 class="qizyoz" style="color: #aaaae2">{{ product.title }}, soni {{ product.count }} ta</h4>
+                    <h4 class="qizyoz" style="color: #aaaae2">{{ product.description }}</h4>
+                    <h4 class="qizyoz" style="color: #aaaae2">{{ product.price }}</h4>
+                    <h4 class="qizyoz" style="color: #aaaae2">{{ product.category }}</h4>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ortaga">
+        <div class="magazin">
+
+          <div>
+            <div class="text-center ">
+              <div class="media_button mt-1">
+                <button class="OgilBola" data-id="boy">Ogil<br> bola</button>
+                <button class="QizBola " data-id="gril" style="background-color: hotpink">Qiz <br> bola</button>
+                <button class="Umumiy " data-id="all">Umu <br> miy</button>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-5 pt-5">
+            <div class="row row-cols-2 row-cols-md-4 g-4">
+              {% block content %}
+                  {% for product in products %}
+                                      {% if product.category_id == 1 %}
+                <a href="{% url 'details' product.pk %}" class=" all boy block_item">
+                  <div class="col  ">
+                    <div class="">
+                        <div class="favorite favorite_left"></div>
+                    </div>
+                    <div id="" class="box ">
+                      <img src={{ product.image1.url }} class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h4 class="nem">
+                          <p>&ensp;{{ product.title|slice:14 }}...</p>
+                          <p class="bi bi-balloon-heart" style="color: cadetblue">&ensp;{{ product.description|slice:13 }}...</p>
+                          <p class="narx">&ensp;{{ product.price }} </p>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                          {% elif product.category_id == 2 %}
+                          <a href="{% url 'details' product.pk %}" class=" all gril block_item">
+                  <div class="col  ">
+                    <div class="">
+                        <div class="favorite favorite_left"></div>
+                    </div>
+                    <div id="" class="boxx ">
+                      <img src={{ product.image1.url }} class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h4>
+                          <p style="color: hotpink">&ensp;{{ product.title|slice:14 }}...</p>
+                          <p class="bi bi-balloon-heart" style="color: hotpink">&ensp;{{ product.description|slice:13 }}...</p>
+                          <p class="narx" style="color: hotpink">&ensp;{{ product.price }} </p>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                          {% elif product.category_id == 3 %}
+                          <a href="{% url 'details' product.pk %}" class=" all block_item">
+                  <div class="col  ">
+                    <div class="">
+                        <div class="favorite favorite_left"></div>
+                    </div>
+                    <div id="" class="boxxx ">
+                      <img src={{ product.image1.url }} class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h4 class="nemmm">
+                          <p>&ensp;{{ product.title|slice:14 }}...</p>
+                          <p class="bi bi-balloon-heart" style="color: #aaaae2;">&ensp;{{ product.description|slice:13 }}...</p>
+                          <p class="narx">&ensp;{{ product.price }} </p>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                      {% endif %}
+                    {% endfor %}
+              {% endblock content %}
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div>
+          <div class="tuga">
+            <div class="soz">
+              <a href="about.html" class="text-decoration-none">BIZ HAQIMZDA</a><br>
+              <a href="https://t.me/asilbeek_17/" class="text-decoration-none">YETKAZIB BERISH</a><br>
+              <a href="https://t.me/asilbeek_17/" class="text-decoration-none">BYURTMABERISSH</a><br>
+            </div>
+            <div class="foto">
+              <img src="{% static 'images/telegram-icon.png' %}" alt="">
+              <br>
+              <img src="{% static 'images/instagram-icon.png' %}" alt="">
+            </div>
+          </div>
+          <p>SAYT KURSOR.UZ JAMOASI TOMONIDAN YASALGAN</p>
+          </div>
+  </div>
+
+   <script src="{% static 'js/main.js' %}"></script>
+   <script src="{% static 'fontawesome-free-6.1.1-web/js/all.js' %}"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+</body>
+</html>
